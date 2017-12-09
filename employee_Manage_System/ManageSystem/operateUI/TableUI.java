@@ -7,7 +7,7 @@ import beginUI.Exist;
 import DBconn.DBconn;
 
 public class TableUI {
-		public void dbCreate() throws SQLException {	//´´½¨±í
+		public void dbCreate() throws SQLException {	//åˆ›å»ºè¡¨
 			Connection conn = new DBconn().getConn();
 			Statement stat = conn.createStatement();
 			String sql = ("create table EMPLOYEE"+
@@ -22,10 +22,10 @@ public class TableUI {
 			boolean bool = new Exist().tableExist();
 		     if (bool) { 
 		    	 System.out.println("");
-		        System.out.println("---Congratulation£¡´´½¨³É¹¦£¡---");  
+		        System.out.println("---Congratulationï¼åˆ›å»ºæˆåŠŸï¼---");  
 		     }else{  
 		    	 System.out.println("");
-			        System.out.println("---o(¨i©n¨i)o£¡´´½¨Ê§°Ü£¡---");  
+			        System.out.println("---o(â•¥ï¹â•¥)oï¼åˆ›å»ºå¤±è´¥ï¼---");  
 		     	}  
 	}
 }

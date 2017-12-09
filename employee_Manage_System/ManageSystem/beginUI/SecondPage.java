@@ -11,7 +11,7 @@ public class SecondPage
 		boolean bool = new Exist().tableExist();
 	     if (bool) { 
 	    	 System.out.println("");
-	        System.out.println("---Ô±¹¤±íÒÑ¾­´æÔÚ!---");  
+	        System.out.println("---å‘˜å·¥è¡¨å·²ç»å­˜åœ¨!---");  
 	     }else{  
 	             new TableUI().dbCreate();
 	     	}  
@@ -20,7 +20,7 @@ public class SecondPage
 	public void add() throws SQLException 
 	{
 		System.out.println("");
-		System.out.print("ÇëÊäÈëÒªÌí¼ÓµÄÔ±¹¤±àºÅ:");
+		System.out.print("è¯·è¾“å…¥è¦æ·»åŠ çš„å‘˜å·¥ç¼–å·:");
 		Scanner scan = new Scanner(System.in);
 		int number = scan.nextInt();
 		boolean boolT = new Exist().tableExist();
@@ -29,13 +29,13 @@ public class SecondPage
 	    	 boolean boolE = new Exist().empExist(number);
 	 		 if (boolE) {
 	 			System.out.println("");
-	 			System.out.println("--->"+number+"ºÅÔ±¹¤ÒÑ¾­´æÔÚ<---");
+	 			System.out.println("--->"+number+"å·å‘˜å·¥å·²ç»å­˜åœ¨<---");
 	 		 } else {
 	 			new AddUI().addEmp(number);
 	 		 }
 		 }else{ 
 			 System.out.println("");
-		     System.out.println("--->Ô±¹¤±í²»´æÔÚ£¬Çë´´½¨£¡<---");
+		     System.out.println("--->å‘˜å·¥è¡¨ä¸å­˜åœ¨ï¼Œè¯·åˆ›å»ºï¼<---");
 		  	}  
 		
 	}
@@ -43,7 +43,7 @@ public class SecondPage
 	public void delete() throws SQLException 
 	{
 		System.out.println("");
-		System.out.print("ÇëÊäÈëÒªÉ¾³ýµÄÔ±¹¤±àºÅ:");
+		System.out.print("è¯·è¾“å…¥è¦åˆ é™¤çš„å‘˜å·¥ç¼–å·:");
 		Scanner scan = new Scanner(System.in);
 		int number = scan.nextInt();
 		boolean boolT = new Exist().tableExist();
@@ -54,18 +54,18 @@ public class SecondPage
 	 			new DeleteUI().delEmp(number);
 	 		 } else {
 	 			System.out.println("");
-	 			System.out.println("--->"+number+"Ô±¹¤²»´æÔÚ£¡<---");
+	 			System.out.println("--->"+number+"å‘˜å·¥ä¸å­˜åœ¨ï¼<---");
 	 		 }
 		 }else{  
 			 System.out.println("");
-		     System.out.println("--->Ô±¹¤±í²»´æÔÚ£¬Çë´´½¨£¡<---");
+		     System.out.println("--->å‘˜å·¥è¡¨ä¸å­˜åœ¨ï¼Œè¯·åˆ›å»ºï¼<---");
 		  	}  
 	}
 	
 	public void update() throws SQLException 
 	{
 		System.out.println("");
-		System.out.print("ÇëÊäÈëÒª¸üÐÂÐÅÏ¢µÄÔ±¹¤±àºÅ:");
+		System.out.print("è¯·è¾“å…¥è¦æ›´æ–°ä¿¡æ¯çš„å‘˜å·¥ç¼–å·:");
 		Scanner scan = new Scanner(System.in);
 		int number = scan.nextInt();
 		boolean boolT = new Exist().tableExist();
@@ -76,18 +76,18 @@ public class SecondPage
 	 			new UpdateUI().updateEmp(number);
 	 		 } else {
 	 			System.out.println("");
-	 			System.out.println("--->"+number+"Ô±¹¤²»´æÔÚ£¡<---");
+	 			System.out.println("--->"+number+"å‘˜å·¥ä¸å­˜åœ¨ï¼<---");
 	 		 }
 		 }else{  
 			 System.out.println("");
-		     System.out.println("--->Ô±¹¤±í²»´æÔÚ£¬Çë´´½¨£¡<---");
+		     System.out.println("--->å‘˜å·¥è¡¨ä¸å­˜åœ¨ï¼Œè¯·åˆ›å»ºï¼<---");
 		  	}  
 	}
 	
 	public void select() throws SQLException
 	{
 		System.out.println("");
-		System.out.print("ÇëÊäÈëÒª²éÑ¯µÄÔ±¹¤±àºÅ:");
+		System.out.print("è¯·è¾“å…¥è¦æŸ¥è¯¢çš„å‘˜å·¥ç¼–å·:");
 		Scanner scan = new Scanner(System.in);
 		int number = scan.nextInt();
 		boolean boolT = new Exist().tableExist();
@@ -98,11 +98,11 @@ public class SecondPage
 	 			new SelectUI().selectEmp(number);
 	 		 } else {
 	 			System.out.println("");
-	 			System.out.println("--->"+number+"Ô±¹¤²»´æÔÚ£¡<---");
+	 			System.out.println("--->"+number+"å‘˜å·¥ä¸å­˜åœ¨ï¼<---");
 	 		 }
 		 }else{  
 			 System.out.println("");
-		     System.out.println("--->Ô±¹¤±í²»´æÔÚ£¬Çë´´½¨£¡<---");
+		     System.out.println("--->å‘˜å·¥è¡¨ä¸å­˜åœ¨ï¼Œè¯·åˆ›å»ºï¼<---");
 		  	}  
 	}
 	
@@ -120,7 +120,7 @@ public class SecondPage
             new DeleteUI().delTable();
          }else{  
         	 System.out.println("");
-             System.out.println("--->Ô±¹¤±í²»´æÔÚ£¡£¡£¡<---");
+             System.out.println("--->å‘˜å·¥è¡¨ä¸å­˜åœ¨ï¼ï¼ï¼<---");
          	}  
 	}	
 }

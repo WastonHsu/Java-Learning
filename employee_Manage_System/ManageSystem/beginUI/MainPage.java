@@ -7,17 +7,17 @@ public class MainPage {
 	public void menu(){
 		System.out.println("");
 		System.out.println("--------------------------------");
-		System.out.println(" Ô±¹¤»ù´¡ÐÅÏ¢¹ÜÀí(employee-crud)");
-		System.out.println("	ÇëÊäÈë1-8½øÐÐ²Ù×÷");
-		System.out.println("	1.Ìí¼ÓÔ±¹¤ÐÅÏ¢");
-		System.out.println("	2.É¾³ýÔ±¹¤ÐÅÏ¢");
-		System.out.println("	3.¸üÐÂÔ±¹¤ÐÅÏ¢");
-		System.out.println("	4.²éÑ¯Ô±¹¤ÐÅÏ¢");
-		System.out.println("	5.²éÑ¯ËùÓÐÔ±¹¤");
-		System.out.println("	6.´´½¨Ô±¹¤±í");
-		System.out.println("	7.É¾³ýÔ±¹¤±í");
-		System.out.println("	8.ÍË³öÏµÍ³");
-		System.out.print("ÇëÊäÈëÄúµÄÑ¡Ôñ:");
+		System.out.println(" å‘˜å·¥åŸºç¡€ä¿¡æ¯ç®¡ç†(employee-crud)");
+		System.out.println("	è¯·è¾“å…¥1-8è¿›è¡Œæ“ä½œ");
+		System.out.println("	1.æ·»åŠ å‘˜å·¥ä¿¡æ¯");
+		System.out.println("	2.åˆ é™¤å‘˜å·¥ä¿¡æ¯");
+		System.out.println("	3.æ›´æ–°å‘˜å·¥ä¿¡æ¯");
+		System.out.println("	4.æŸ¥è¯¢å‘˜å·¥ä¿¡æ¯");
+		System.out.println("	5.æŸ¥è¯¢æ‰€æœ‰å‘˜å·¥");
+		System.out.println("	6.åˆ›å»ºå‘˜å·¥è¡¨");
+		System.out.println("	7.åˆ é™¤å‘˜å·¥è¡¨");
+		System.out.println("	8.é€€å‡ºç³»ç»Ÿ");
+		System.out.print("è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©:");
 	}
 	public static void main(String[] args) throws SQLException{
 		while (true){          
@@ -51,18 +51,18 @@ public class MainPage {
 						new SecondPage().delTable();
 						break;
 					case 8:
-						System.out.println("±¾ÏµÍ³ÒÑÍË³ö");
+						System.out.println("æœ¬ç³»ç»Ÿå·²é€€å‡º");
 						System.exit(0);
 						break;
 					default:
 						System.out.println("");
-						System.out.println("--->ÇëÊäÈëÊý×Ö1-8£¡£¡£¡<---");
+						System.out.println("--->è¯·è¾“å…¥æ•°å­—1-8ï¼ï¼ï¼<---");
 						break;
 				}
 			} 
 			catch (java.util.InputMismatchException e) 
 			{
-				System.out.println("ÇëÊäÈëÊý×Ö");
+				System.out.println("è¯·è¾“å…¥æ•°å­—");
 			}
 		}
 	}

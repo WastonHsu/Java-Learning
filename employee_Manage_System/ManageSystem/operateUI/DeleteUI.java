@@ -12,7 +12,7 @@ public class DeleteUI
 {
 	public Employee delEmp(int number)
 	{
-		PreparedStatement pstmt = null;//ÉùÃ÷Ô¤´¦Àí
+		PreparedStatement pstmt = null;//å£°æ˜Žé¢„å¤„ç†
 		Connection conn = new DBconn().getConn();
 		try
 		{
@@ -21,7 +21,7 @@ public class DeleteUI
 			pstmt.setInt(1, number);
 			pstmt.execute();
 			System.out.println("");
-			System.out.println("------>É¾³ý³É¹¦<------");
+			System.out.println("------>åˆ é™¤æˆåŠŸ<------");
 		}catch (SQLException e) {
 			e.printStackTrace();
 		}finally{
@@ -44,11 +44,11 @@ public class DeleteUI
 			boolean bool = new Exist().tableExist();
 		     if (bool) { 
 		    	 System.out.println("");
-		    	 System.out.println("---o(¨i©n¨i)o£¡É¾³ýÊ§°Ü£¡---");
-		        //System.out.println("---Congratulation£¡´´½¨³É¹¦£¡---");  
+		    	 System.out.println("---o(â•¥ï¹â•¥)oï¼åˆ é™¤å¤±è´¥ï¼---");
+		        //System.out.println("---Congratulationï¼åˆ›å»ºæˆåŠŸï¼---");  
 		     }else{  
 		    	 System.out.println("");
-			        System.out.println("---Congratulation£¡É¾³ý³É¹¦£¡---");  
+			        System.out.println("---Congratulationï¼åˆ é™¤æˆåŠŸï¼---");  
 		     	}  
 	}
 }

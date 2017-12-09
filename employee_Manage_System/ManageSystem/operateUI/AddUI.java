@@ -11,35 +11,35 @@ public class AddUI
 {
 	public Employee addEmp(int eNumber)
 	{
-		PreparedStatement pstmt = null;//ÉùÃ÷Ô¤´¦Àí
-		Connection conn = new DBconn().getConn();//Á´½ÓÊı¾İ¿â
+		PreparedStatement pstmt = null;//å£°æ˜é¢„å¤„ç†
+		Connection conn = new DBconn().getConn();//é“¾æ¥æ•°æ®åº“
 		Scanner sc = new Scanner(System.in);
 		try 
 		{
 			String sql ="insert into EMPLOYEE values(?,?,?,?,?,?,?);";
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setInt(1, eNumber);
-			System.out.print("ÇëÊäÈëÔ±¹¤ĞÕÃû:");
+			System.out.print("è¯·è¾“å…¥å‘˜å·¥å§“å:");
 			String eName = sc.next();
 			pstmt.setString(2, eName);
-			System.out.print("ÇëÊäÈëÔ±¹¤Éí·İÖ¤ºÅ:");
+			System.out.print("è¯·è¾“å…¥å‘˜å·¥èº«ä»½è¯å·:");
 			String eIdcard = sc.next();
 			pstmt.setString(3, eIdcard);
-			System.out.print("ÇëÊäÈëÔ±¹¤µç»°:");
+			System.out.print("è¯·è¾“å…¥å‘˜å·¥ç”µè¯:");
 			String eTel = sc.next();
 			pstmt.setString(4, eTel);
-			System.out.print("ÇëÊäÈëÔ±¹¤²¿ÃÅ:");
+			System.out.print("è¯·è¾“å…¥å‘˜å·¥éƒ¨é—¨:");
 			String ePart = sc.next();
 			pstmt.setString(5, ePart);
-			System.out.print("ÇëÊäÈëÔ±¹¤¹¤×÷:");
+			System.out.print("è¯·è¾“å…¥å‘˜å·¥å·¥ä½œ:");
 			String eJob = sc.next();
 			pstmt.setString(6, eJob);
-			System.out.print("ÇëÊäÈëÔ±¹¤ÓÊÏä:");
+			System.out.print("è¯·è¾“å…¥å‘˜å·¥é‚®ç®±:");
 			String eMail = sc.next();
 			pstmt.setString(7, eMail);
 			if(pstmt.executeUpdate()>0)
-			{//Èç¹û·µ»ØµÄÓ°ÏìĞĞÊı´óÓÚ0£¬ÔòÖ¤Ã÷Ôö¼Ó³É¹¦
-				System.out.println("---Congratulation£¡Ìí¼Ó³É¹¦£¡---");
+			{//å¦‚æœè¿”å›çš„å½±å“è¡Œæ•°å¤§äº0ï¼Œåˆ™è¯æ˜å¢åŠ æˆåŠŸ
+				System.out.println("---Congratulationï¼æ·»åŠ æˆåŠŸï¼---");
 			}
 			pstmt.close();
 			conn.close();

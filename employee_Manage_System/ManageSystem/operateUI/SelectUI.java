@@ -10,9 +10,9 @@ import DBconn.DBconn;
 
 public class SelectUI {
 	public Employee selectEmp(int number){
-		Employee emp=null;	//ÉùÃ÷ÓÃµ½µÄemp
-		PreparedStatement pstmt = null;	//ÉùÃ÷Ô¤´¦Àí
-		Connection conn = new DBconn().getConn();	//Á´½ÓÊı¾İ¿â
+		Employee emp=null;	//å£°æ˜ç”¨åˆ°çš„emp
+		PreparedStatement pstmt = null;	//å£°æ˜é¢„å¤„ç†
+		Connection conn = new DBconn().getConn();	//é“¾æ¥æ•°æ®åº“
 		String sql="select * from EMPLOYEE where eNumber=?";
 		try {
 			pstmt=conn.prepareStatement(sql);
@@ -27,15 +27,15 @@ public class SelectUI {
 				String eJob=rs.getString(6);
 				String eMail=rs.getString(7);
 				System.out.println("");
-				System.out.println("---"+number+"ºÅÔ±¹¤ĞÅÏ¢ÈçÏÂ---");
-				System.out.println("¸ÃÔ±¹¤±àºÅÎª:"+eNumber);
-				System.out.println("¸ÃÔ±¹¤ĞÕÃûÎª:"+eName);
-				System.out.println("¸ÃÔ±¹¤Éí·İÖ¤ºÅÎª:"+eIDcard);
-				System.out.println("¸ÄÔ±¹¤µç»°Îª:"+eTel);
-				System.out.println("¸ÄÔ±¹¤²¿ÃÅÎª:"+ePart);
-				System.out.println("¸ÃÔ±¹¤¹¤×÷Îª:"+eJob);
-				System.out.println("¸ÃÔ±¹¤ÓÊÏäÎª:"+eMail);
-				System.out.println("------>Finally,²éÕÒ³É¹¦£¡<------");
+				System.out.println("---"+number+"å·å‘˜å·¥ä¿¡æ¯å¦‚ä¸‹---");
+				System.out.println("è¯¥å‘˜å·¥ç¼–å·ä¸º:"+eNumber);
+				System.out.println("è¯¥å‘˜å·¥å§“åä¸º:"+eName);
+				System.out.println("è¯¥å‘˜å·¥èº«ä»½è¯å·ä¸º:"+eIDcard);
+				System.out.println("æ”¹å‘˜å·¥ç”µè¯ä¸º:"+eTel);
+				System.out.println("æ”¹å‘˜å·¥éƒ¨é—¨ä¸º:"+ePart);
+				System.out.println("è¯¥å‘˜å·¥å·¥ä½œä¸º:"+eJob);
+				System.out.println("è¯¥å‘˜å·¥é‚®ç®±ä¸º:"+eMail);
+				System.out.println("------>Finally,æŸ¥æ‰¾æˆåŠŸï¼<------");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -52,8 +52,8 @@ public class SelectUI {
 	}
 	
 	public void allEmp() throws SQLException{
-		Connection conn = new DBconn().getConn();//Á´½ÓÊı¾İ¿â
-		Statement stat = conn.createStatement();//ÉùÃ÷Ô¤´¦Àí
+		Connection conn = new DBconn().getConn();//é“¾æ¥æ•°æ®åº“
+		Statement stat = conn.createStatement();//å£°æ˜é¢„å¤„ç†
 		String sql="select * from EMPLOYEE";
 		ResultSet rs=stat.executeQuery(sql); 
 		System.out.println("");
@@ -74,6 +74,6 @@ public class SelectUI {
 			System.out.print(String.format("%-15s",rs.getString(6)));
 			System.out.println(String.format("%-25s",rs.getString(7)));
 		}
-		System.out.println("------>Finally,²éÕÒ³É¹¦£¡<------");
+		System.out.println("------>Finally,æŸ¥æ‰¾æˆåŠŸï¼<------");
 	}
 }

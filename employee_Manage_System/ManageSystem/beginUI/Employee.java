@@ -2,13 +2,13 @@ package beginUI;
 
 public class Employee 
 {
-		private int eNumber;    //Ô±¹¤idºÅ
-		private String eName;//Ô±¹¤ĞÕÃû
-		private String eIDcard;//Ô±¹¤Éí·İÖ¤ºÅ
-		private String eTel;//µç»°
-		private String ePart;//²¿ÃÅ
-		private String eJob;//¹¤×÷
-		private String eMail;//ÓÊÏä
+		private int eNumber;    //å‘˜å·¥idå·
+		private String eName;//å‘˜å·¥å§“å
+		private String eIDcard;//å‘˜å·¥èº«ä»½è¯å·
+		private String eTel;//ç”µè¯
+		private String ePart;//éƒ¨é—¨
+		private String eJob;//å·¥ä½œ
+		private String eMail;//é‚®ç®±
 		public int geteNumber() {
 			return eNumber;
 		}
