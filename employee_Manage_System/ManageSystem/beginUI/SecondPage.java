@@ -11,7 +11,7 @@ public class SecondPage
 		boolean bool = new Exist().tableExist();
 	     if (bool) { 
 	    	 System.out.println("");
-	        System.out.println("---员工表已经存在!---");  
+	         System.out.println("---员工表已经存在!---");  
 	     }else{  
 	             new TableUI().dbCreate();
 	     	}  

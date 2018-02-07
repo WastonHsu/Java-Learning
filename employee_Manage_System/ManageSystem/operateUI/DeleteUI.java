@@ -48,7 +48,7 @@ public class DeleteUI
 		        //System.out.println("---Congratulation！创建成功！---");  
 		     }else{  
 		    	 System.out.println("");
-			        System.out.println("---Congratulation！删除成功！---");  
+			     System.out.println("---Congratulation！删除成功！---");  
 		     	}  
 	}
 }
